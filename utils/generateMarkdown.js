@@ -49,4 +49,15 @@ function generateLicenseBadge(license) {
   return badges[license] || "";
 }
 
+
+// Function to generate a license notice based on the selected license
+function generateLicenseNotice(license) {
+  const notices = {
+    "MIT": "This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.",
+   
+  };
+
+  return notices[license] || "";
+}
+
 module.exports = generateMarkdown;
