@@ -39,4 +39,14 @@ function generateMarkdown(data) {
   `;
 }
 
+
+// Function to generate a badge based on the selected license
+function generateLicenseBadge(license) {
+  const badges = {
+    "MIT": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+    };
+
+  return badges[license] || "";
+}
+
 module.exports = generateMarkdown;
