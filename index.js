@@ -45,6 +45,12 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    try {
+        fs.writeFileSync(fileName, data);
+        console.log("README file generated successfully!");
+      } catch (err) {
+        console.error("Error while generating README file:", err);
+      }
 }
 
 // function to initialize program
