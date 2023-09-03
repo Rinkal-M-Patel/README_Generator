@@ -55,7 +55,11 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-
+    inquirer.prompt(questions).then((responses) => {
+        const markdown = generateMarkdown(responses);
+        const readmeFilePath = path.join(__dirname,"utils", "generated-README.md");
+        writeToFile(readmeFilePath, markdown);
+      });
 }
 
 // function call to initialize program
